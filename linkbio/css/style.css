@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+body {
+    color: #ffffff;
+    background-image: url('../img/background-dark.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+}
+
+@keyframes lightFlash {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+.light-flash {
+    animation: lightFlash 1s ease-in-out;
+}
+
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-linkbio-section{
+    margin-top: 15rem;
+}
+
+.card-linkbio {
+    position: relative;
+    background: linear-gradient(
+        to bottom, 
+        #1e1e1e, 
+        #000000 
+    );
+    border-radius: 2rem;
+    height: auto;
+    padding: 2rem 2rem 2rem 2rem;
+    width: auto;
+}
+
+.header-linkbio-theme {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+}
+
+#change-theme {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    margin-right: 1.3rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#change-theme:hover {
+    transform: scale(1.1); 
+}
+
+.linkbio-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icon-profile {
+    height: 8rem;
+    border-radius: 50%;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+#profile-h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.3rem;
+    margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+#verification-icon {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.profile-p {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    width: 38rem;
+}
+
+.profile-p p {
+    color: #888888;
+    margin-top: 1rem;
+}
+
+.social-medias {
+    display: flex;
+    justify-content: center;
+}
+
+.socialMedia-card {
+    background-color: #1e1e1e9a;
+    width: 40rem;
+    height: 4.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.socialMedia-card:hover {
+    transform: scale(1.02);
+    background-color: #1e1e1e;
+}
+
+#x-icon {
+    height: 3.5rem;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.social-medias-p {
+    margin-left: 1rem;
+}
+
+#social-medias-p1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#social-medias-p2 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: #888888;
+}
+
+.social-medias {
+    margin-top: 1rem;
+}
+
+@media (max-width: 898px) { 
+    .socialMedia-card {
+        width: 90vw;
+    }
+
+    .card-linkbio-section {
+        width: 95vw;
+        margin-top: 50vh;
+    }
+
+    .profile-p {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 497px) { 
+    .socialMedia-card {
+        width: 90vw;
+    }
+
+    .card-linkbio-section {
+        width: 100vw;
+        margin-top: 50vh;
+    }
+
+    .profile-p {
+        width: 90vw;
+    }
+
+    .card-linkbio {
+        border-radius: 0;
+    }
+
+}
